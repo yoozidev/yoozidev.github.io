@@ -1,0 +1,29 @@
+<header>
+	<nav class="navbar" id="navbar">
+		<div class="navbar__logo">
+			<a href="#"><img src="assets/images/yz_logo.png" alt="logo"></a>
+		</div>
+		<div class="navbar__menu">
+			<ul>
+				<li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+				<!-- <li><i [routerLink]="['yzdev/content/about']" [routerLinkActive]="['active']"></i><a draggable="false"><span>About</span></a></li> -->
+				<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+				<li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+				<li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+				<!-- <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li> -->
+				<li class="nav-item"><a class="nav-link" [routerLink]="['/content/contact']" [routerLinkActive]="['active']"><span>Contact</span></a></li>
+			</ul>
+		</div>
+
+		<!-- Toggle -->
+		<button class="navbar__toggle-btn">
+			<i class="fa-solid fa-bars"></i>
+		</button>
+
+	</nav>
+</header>
+<!-- content -->
+<div>
+	<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,28 @@
+<div class="inner-section" id="skills">
+	<div class="container">
+		<div class="inner__top">
+			<span class="title">skills & knowledge</span>
+		</div>
+		<div class="inner__bottom">
+			<table mat-table [dataSource]="dataSource">
+				<ng-container matColumnDef="skills">
+					<th mat-header-cell *matHeaderCellDef class="base__txt-center"><div class="th-fixed"><span class="sub-title">skills</span></div></th>
+					<td mat-cell *matCellDef="let element" class="base__txt-center">
+					  <span [title]="element.skills">{{element.skills}}</span>
+					</td>
+				</ng-container>
+
+
+				<ng-container matColumnDef="knowledge">
+					<th mat-header-cell *matHeaderCellDef class="base__txt-center"><div class="th-fixed"><span class="sub-title">knowledge</span></div></th>
+					<td mat-cell *matCellDef="let element" class="base__txt-center">
+					  <span [title]="element.knowledge">{{element.knowledge}}</span>
+					</td>
+				</ng-container>
+
+				<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+				<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+			</table>
+		</div>
+	</div>
+</div>
