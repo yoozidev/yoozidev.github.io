@@ -4,14 +4,14 @@
 <div *ngIf="!loading" cdkScrollable (scroll)="onWindowScroll($event)">
 	<app-header></app-header>
 	<div class="section">
-		<ng-container (click)="onClick()" *ngIf="!contactRouting">
+		<ng-container *ngIf="!contactRouting">
 			<app-home></app-home>
 			<app-about></app-about>
 			<app-experience></app-experience>
 			<app-skills></app-skills>
 			<app-education></app-education>
 		</ng-container>
-		<ng-container (click)="onClick(true)" *ngIf="contactRouting">
+		<ng-container *ngIf="contactRouting">
 			<app-contact></app-contact>
 		</ng-container>
 		

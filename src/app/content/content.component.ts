@@ -6,7 +6,7 @@ import {Router, NavigationEnd} from '@angular/router'
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+export class ContentComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   public onWindowScroll($event: any): void {
     const scrollTop = $event.target['scrollingElement'].scrollTop;
@@ -45,38 +45,38 @@ export class ContentComponent implements OnInit, OnChanges, DoCheck, AfterConten
     setTimeout(()=>{this.loading = false},1000);
   }
 
-  onClick(nav: boolean = false): void {
-    if (nav) {
-      this.contactRouting = true; 
-      setTimeout(()=>{this.loading = false},1000);
-    }
-  }
+  // onClick(nav: boolean = false): void {
+  //   if (nav) {
+  //     this.contactRouting = true; 
+  //     setTimeout(()=>{this.loading = false},1000);
+  //   }
+  // }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('onchanged');
-  }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   console.log('onchanged');
+  // }
 
-  ngDoCheck(): void {
-    console.log('docheck');
+  // ngDoCheck(): void {
+  //   console.log('docheck');
     
-  }
+  // }
 
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
+  // ngAfterViewInit(): void {
+  //   console.log('ngAfterViewInit');
     
-  }
+  // }
 
-  ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked')
-  }
+  // ngAfterViewChecked(): void {
+  //   console.log('ngAfterViewChecked')
+  // }
 
-  ngAfterContentInit(): void {
-    console.log('ngAfterContentInit')
-  }
+  // ngAfterContentInit(): void {
+  //   console.log('ngAfterContentInit')
+  // }
 
-  ngAfterContentChecked(): void {
-    console.log('ngAfterContentChecked')
-  }
+  // ngAfterContentChecked(): void {
+  //   console.log('ngAfterContentChecked')
+  // }
 
 
 
