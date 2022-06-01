@@ -1,0 +1,89 @@
+
+/*
+
+base class css v0.2_191204
+author: won taek yoon
+
+*/
+img {min-height:10px;vertical-align:top;}
+
+strong, .base__strong {font-weight:bold;}
+.base__font-child {font-size:inherit;line-height:inherit;color:inherit;font-family:inherit;letter-spacing: inherit;}
+.base__font-size-0 {font-size:0;}
+.base__color-inherit {color:inherit;}
+.base__txt-hide {font-size:1rem;text-align: left;text-indent: -99999px;white-space: nowrap;overflow: hidden;}
+.base__txt-center {text-align: center;}
+.base__txt-right {text-align: right;}
+.base__txt-left {text-align: left;}
+.base__ellipsis {white-space: nowrap;overflow: hidden;-ms-text-overflow: ellipsis;text-overflow: ellipsis;}
+.base__multi-ellipsis {overflow: hidden;}
+.base__wb-keep-all {word-break:keep-all;}
+.base__wb-break-all {word-break:break-all;}
+
+.base__txt-point, .base__txt-bar {position: relative;}
+.base__txt-point:before, .base__txt-bar:before {position: absolute;top: 0;left: 0;font-size: inherit;line-height: inherit;color: inherit;}
+.base__txt-point:before {content: '*';}
+.base__txt-bar:before {content: '-';}
+
+.base__w-100 {width:100%;}
+.base__w-80 {width:80%;}
+.base__w-75 {width:75%;}
+.base__w-70 {width:70%;}
+.base__w-50 {width:50%;}
+.base__w-33 {width:33.3333%;}
+.base__w-30 {width:30%;}
+.base__w-25 {width:25%;}
+.base__w-20 {width:20%;}
+.base__child-w-20 > * {width:20%;}
+.base__child-w-25 > * {width:25%;}
+.base__child-w-30 > * {width:30%;}
+.base__child-w-33 > * {width:33.3333%;}
+.base__child-w-50 > * {width:50%;}
+.base__child-w-70 > * {width:70%;}
+.base__child-w-75 > * {width:75%;}
+.base__child-w-100 > * {width:100%;}
+
+.base__h-100 {height: 100%;}
+
+.base__o-hidden {overflow: hidden;}
+.base__f-left,.base__child-f-left > * {float: left;}
+.base__f-right,.base__child-f-right > * {float: right;}
+.base__clearfix:after {content: ' ';display: table;clear: both;}
+.base__inline-fix {font-size: 0;}
+.base__inline-fix > * {display:inline-block;vertical-align: top;}
+.base__v-top {vertical-align: top;}
+.base__v-middle {vertical-align: middle;}
+.base__p-relative {position:relative;}
+.base__p-absolute {position:absolute;}
+.base__p-fixed {position:fixed;}
+.base__d-block {display: block;}
+.base__d-inline-block {display: inline-block;}
+.base__d-table {display: table;}
+.base__d-table .cell {display: table-cell;}
+
+.base__table-link tbody tr {cursor: pointer;}
+
+.base__btn-img-flex {display:inline-flex;align-items:center;justify-content:center;}
+.base__btn-img {vertical-align:top;}
+.base__btn-img > span, .base__btn-img > i {display:inline-block;vertical-align: top;}
+
+.base__momentum-scroll {-webkit-overflow-scrolling: touch;}
+
+.base__transition, .base__transition-before:before, .base__transition-after:after {-webkit-transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -moz-transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -ms-transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1);}
+.base__transition-bg, .base__transition-bg-before:before, .base__transition-bg-after:after {-webkit-transition: background-color .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -moz-transition: background-color .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -ms-transition: background-color .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: background-color .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: background-color .4s cubic-bezier(0.215, 0.61, 0.355, 1);}
+
+/*--------------------------------------------*/
+
+.shave {overflow: hidden;}
+.js-shave-char {font-size:inherit;color:inherit;line-height: inherit;}
+.js-shave {font-size:inherit;color:inherit;line-height: inherit;display: none;}
+.swiper-wrapper {display:flex;width:100%;transition-property:transform;}
+.swiper-wrapper .swiper-slide {flex-shrink:0;transition-property:transform;}
