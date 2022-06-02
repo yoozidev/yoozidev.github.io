@@ -5,17 +5,16 @@ import {AboutComponent} from './content/about/about.component'
 import {ContactComponent} from './content/contact/contact.component'
 
 const routes: Routes = [
-  // { path: '', component: ContentComponent },
-  // { path: 'contact', component: ContactComponent },
-  // { path: '**', redirectTo: '', pathMatch: 'full' }
-
-  { path: '', component: ContentComponent},
-  { path: 'content', component: ContentComponent,
-    children : [
-      { path: 'contact', component: ContactComponent },
-    ]},
- 
+  { path: '', component: ContentComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
+
+  // { path: '', component: ContentComponent},
+  // { path: 'content', component: ContentComponent,
+  //   children : [
+  //     { path: 'contact', component: ContactComponent },
+  //   ]},
+ 
+  // { path: '**', redirectTo: '', pathMatch: 'full' }
 
 
 ];

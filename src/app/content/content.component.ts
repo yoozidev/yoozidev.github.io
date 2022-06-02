@@ -21,27 +21,27 @@ export class ContentComponent implements OnInit {
   }
 
   loading = true;
-  contactRouting = false;
+  // contactRouting = false;
 
   constructor(
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    console.log('init');
+    // console.log('init');
     
-    this.router.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-          return;
-      }
-      if (evt.url === '/content/contact') {
-        this.contactRouting = true;
-        console.log('changed------------');
+    // this.router.events.subscribe((evt) => {
+    //   if (!(evt instanceof NavigationEnd)) {
+    //       return;
+    //   }
+    //   if (evt.url === '/content/contact') {
+    //     this.contactRouting = true;
+    //     console.log('changed------------');
         
-      } else {
-        this.contactRouting = false;
-      }
-    });
+    //   } else {
+    //     this.contactRouting = false;
+    //   }
+    // });
     setTimeout(()=>{this.loading = false},1000);
   }
 
