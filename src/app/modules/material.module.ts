@@ -1,4 +1,5 @@
 import {NgModule} from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button'
@@ -13,6 +14,7 @@ import {MATERIAL_SANITY_CHECKS} from '@angular/material/core';
 		MatButtonModule,
 		MatTooltipModule,
 		MatInputModule,
+		MatSnackBarModule
 	],
 	exports:  [
 		MatTableModule,
@@ -20,6 +22,7 @@ import {MATERIAL_SANITY_CHECKS} from '@angular/material/core';
 		MatButtonModule,
 		MatTooltipModule,
 		MatInputModule,
+		MatSnackBarModule
 	],
 	providers: [
 		{

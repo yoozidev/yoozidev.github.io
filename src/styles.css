@@ -80,6 +80,11 @@ ul {list-style: none; padding-left: 0;}
 	margin-left: 20px;
 }
 
+.rectangle__botton--normal span {
+	font-weight: var(--weight-semi-bold);
+	font-size: var(--font-small);
+}
+
 
 /* header {height: 60px;} */
 .navbar {
@@ -140,14 +145,14 @@ ul {list-style: none; padding-left: 0;}
 
 .inner-section .container {display: flex; flex-direction: column; padding: 3px; margin:30px; box-shadow: 0 20px 30px 0 rgba(0, 0, 26, 0.15); border-radius: 5px;}
 .inner-section.mat {padding: 60px 0;}
-.inner-section .container-mat {display: flex; flex-direction: column; align-items: center; margin: 40px 50px; background-color: var(--color-white); border-radius: 5px; box-shadow: 0 2px 1px -1px #00000024, 0 1px 1px #00000024, 0 1px 3px #00000024;}
-.inner-section .container-mat .inner__bottom {width: 100%;}
+.inner-section .container.mat {display: flex; flex-direction: column; align-items: center; margin: 40px 50px; background-color: var(--color-white); border-radius: 5px; box-shadow: 0 2px 1px -1px #00000024, 0 1px 1px #00000024, 0 1px 3px #00000024;}
+.inner-section .container.mat .inner__bottom {width: 100%;}
 
 
 
 
 .inner-section .container > div {margin:  3px;}
-.inner-section .container .inner__top {text-align: center;}
+.inner-section .container .inner__top {text-align: center; margin-top: 25px;}
 
 .inner-section .container .inner__top .icon {height:30px; width:30px;}
 .inner-section .container .inner__bottom {display: flex; margin: 20px 0;}
@@ -324,18 +329,39 @@ ul {list-style: none; padding-left: 0;}
 }
 
 
-/* form & table */
+/* form */
 .formContainer {
 	margin: 20px;
-}
-table {
 	width: 100%;
+}
+	
+.formContainer .form-line {
+	display: flex;
+	justify-content: center;
+}
+.formContainer .form-line .rectangle__botton--normal {
 	text-align: center;
 }
-table td {
-	border: 1px solid black;
+.formContainer .form-line .rectangle__botton--normal .mat-raised-button:not(.mat-button-disabled) {
+	background-color: var(--color-main);
+	color: var(--color-white);
 }
 
+
+
+.formContainer .form-line .form-input {
+	text-align: center;
+}
+.formContainer .form-line .form-input .mat-form-field {
+	width: 100%;
+}
+.formContainer .form-line .form-input .mat-form-field textarea {
+	resize: none;
+}
+
+.mat-form-field-underline {
+	display: none;
+}
 
 
 
@@ -502,6 +528,10 @@ table td {
 	}
 	#education .content-box__list .list__row {
 		margin-top: 0;
+	}
+
+	.formContainer .form-line {
+		flex-direction: column;
 	}
 }
 
