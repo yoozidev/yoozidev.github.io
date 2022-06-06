@@ -1,37 +1,45 @@
 <div class="inner-section mat" id="contact">
-	<div class="container-mat">
+	<div class="container mat">
 		<div class="inner__top">
 			<span class="title">Contact</span>
 		</div>
 		<div class="inner__bottom">
 			<div class="formContainer">
 				<form [formGroup]="contactForm">
-					<table>
-					
-						<tbody>
-							<colgroup>
-								<col>
-								<col>
-							</colgroup>
-							<tr>
-								<td>name</td>
-								<td>email</td>
-							</tr>
-							<tr>
-								<td colspan="2">message</td>
-							</tr>
-							<tr>
-								<td colspan="2">my name</td>
-							</tr>
-							<tr>
-								<td colspan="2">my email</td>
-							</tr>
-							<tr>
-								<td colspan="2"><button type="submit" [disabled]="!contactForm.valid" (click)="submit()">Send</button></td>
-							</tr>
-						</tbody>
-					</table>
-					
+					<div class="form-line">
+						<div class="form-input">
+							<mat-form-field appearance="fill">
+								<mat-label>Name</mat-label>
+								<input type="text" matInput formControlName="name">
+								<mat-error *ngIf="contactForm.controls['name'].hasError('required')">Name is required</mat-error>
+							</mat-form-field>
+						</div>
+						<div class="form-input">
+							<mat-form-field appearance="fill">
+								<mat-label>Email</mat-label>
+								<input type="email" matInput formControlName="replyto">
+								<mat-error *ngIf="contactForm.controls['replyto'].hasError('pattern')">Please enter a valid email address</mat-error>
+								<mat-error *ngIf="contactForm.controls['replyto'].hasError('required')">Email is required</mat-error>
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="form-line">
+						<div class="form-input">
+							<mat-form-field appearance="fill">
+								<mat-label>Message</mat-label>
+								<textarea cols="30" rows="10" formControlName="message" matInput></textarea>
+								<mat-error *ngIf="contactForm.controls['message'].hasError('required')">Message is required</mat-error>
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="form-line">
+						<div class="rectangle__botton--normal">
+							<button mat-raised-button type="submit" [disabled]="!contactForm.valid" (click)="submit()">
+								<span>Send</span>
+							</button>
+						</div>
+						
+					</div>
 				</form>
 			</div>
 		</div>
