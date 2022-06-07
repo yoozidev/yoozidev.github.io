@@ -14,7 +14,12 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+  }
+
+  openMenu(): void {
+    const navbar = document.querySelector('.navbar__menu');
+    navbar?.classList.toggle('active');
+
   }
 
 }
