@@ -17,8 +17,10 @@ export class HeaderComponent implements OnInit {
   }
 
   openMenu(): void {
-    const navbar = document.querySelector('.navbar__menu');
+    const navbar = document.querySelector('#navbar');
+    const navbarList = document.querySelector('.navbar__menu');
     navbar?.classList.toggle('active');
+    navbarList?.classList.toggle('active');
 
   }
 

@@ -100,6 +100,7 @@ ul {list-style: none; padding-left: 0;}
 	transition: all 0.5s ease-in-out;
 	z-index: 2;
 }
+
 .navbar.dark {background-color: var(--color-main); padding: 4px;}
 /* .navbar .navbar__logo .logo_image {height: 60px; background: url('assets/images/yz_logo.png') center/cover no-repeat;} */
 .navbar .navbar__logo {
@@ -109,6 +110,9 @@ ul {list-style: none; padding-left: 0;}
 	content:  url('assets/images/yz-logo.png');
 	height: 50px; 
 }
+
+
+
 
 .navbar__menu, .navbar__toggle-btn {margin-right: 32px;}
 .navbar__menu ul {display: flex;}
@@ -514,7 +518,13 @@ ul {list-style: none; padding-left: 0;}
 		/* justify-content: center; */
 	}
 
+	.navbar.active {
+		
+		background-color: var(--color-main);
+	}
+
 	.navbar__menu {
+		transition: all 0.5s ease-in-out;
 		width: 100%; 
 		display: none;
 	}
@@ -542,8 +552,6 @@ ul {list-style: none; padding-left: 0;}
 	.navbar.dark .navbar__toggle-btn {
 		/* margin-right: 10px; */
 	}
-
-
 
 
 	.inner-section .container .inner__bottom {
